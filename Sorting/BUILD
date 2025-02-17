@@ -8,3 +8,10 @@ cc_binary(
     srcs = ["main.cpp",],
     deps = [":sort_deps"],
 )
+
+cc_library(
+    name = "selection_sort",
+    srcs = ["selectionsort.cpp"], 
+    hdrs = ["selectionsort.h"],
+    linkstatic = 0,
+)
