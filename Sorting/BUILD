@@ -1,17 +1,24 @@
-cc_library(
-    name = "sort_deps",
-    hdrs = ["selectionsort.h"],
-)
+sort_deps = [
+        "//Sorting:selection_sort",
+        "//Sorting:bubble_sort"
+]
 
 cc_binary(
     name = "sort",
     srcs = ["main.cpp",],
-    deps = [":sort_deps"],
+    deps = sort_deps,
 )
 
 cc_library(
     name = "selection_sort",
     srcs = ["selectionsort.cpp"], 
     hdrs = ["selectionsort.h"],
+    linkstatic = 0,
+)
+
+cc_library(
+    name = "bubble_sort",
+    srcs = ["bubblesort.cpp"], 
+    hdrs = ["bubblesort.h"],
     linkstatic = 0,
 )
