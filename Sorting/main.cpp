@@ -14,7 +14,8 @@ int main()
         cin>>arr[i];
     }
     
-    bubblesort(arr,n);
+    bubblesort_optimized(arr,n);
+    // bubblesort(arr,n);
     //selectionsort(arr,n);
     
     cout<<"Sorted arr: ";
