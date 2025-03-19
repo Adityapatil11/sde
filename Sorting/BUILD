@@ -4,7 +4,7 @@ sort_deps = [
 ]
 
 cc_binary(
-    name = "sort",
+    name = "main",
     srcs = ["main.cpp",],
     deps = sort_deps,
 )
