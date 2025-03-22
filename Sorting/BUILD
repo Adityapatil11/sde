@@ -1,6 +1,7 @@
 sort_deps = [
         "//Sorting:selection_sort",
-        "//Sorting:bubble_sort"
+        "//Sorting:bubble_sort",
+        "//Sorting:merge_sort",
 ]
 
 cc_binary(
@@ -20,5 +21,12 @@ cc_library(
     name = "bubble_sort",
     srcs = ["bubblesort.cpp"], 
     hdrs = ["bubblesort.h"],
+    linkstatic = 0,
+)
+
+cc_library(
+    name = "merge_sort",
+    srcs = ["mergesort.cpp"],
+    hdrs = ["mergesort.h"],
     linkstatic = 0,
 )
