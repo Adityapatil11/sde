@@ -8,7 +8,7 @@
             "name": "(gdb)Linux Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bazel-bin/Sorting/main",
+            "program": "${workspaceFolder}/bazel-bin/LinkedList/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
