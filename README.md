@@ -27,3 +27,39 @@ Using Bazel apt repo (Recommended - one time setup)
 2.      sudo apt update && sudo apt install bazel
 3.      sudo apt update && sudo apt full-upgrade
 4.      sudo apt install bazel
+
+## Debug configurations for Launch JSON
+
+### GDB debug (Linux)
+bazel builds the code in debug mode as default so we need to make sure it build debug binaries for gdb debugger
+
+bazel build command for debug mode in linux 
+        
+        bazel build //target_file --compilation_mode=dbg
+
+The launch Json floder configurations goes as follows
+
+        {
+            "name": "(gdb)Linux Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "path to exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
