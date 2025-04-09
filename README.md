@@ -63,3 +63,23 @@ The launch Json floder configurations goes as follows
                 }
             ]
         },
+
+### Windows Debug
+
+bazel builds binaries in debug mode itself, use the normal build command to build it 
+
+    bazel build //target_file
+
+The launch Json floder configurations goes as follows
+
+    {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\bazel-bin\\LinkedList\\main.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "integratedTerminal"
+    },    

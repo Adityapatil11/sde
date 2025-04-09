@@ -33,7 +33,7 @@
             "name": "(Windows) Launch",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\bazel-bin\\Sorting\\main.exe",
+            "program": "${workspaceFolder}\\bazel-bin\\LinkedList\\main.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
