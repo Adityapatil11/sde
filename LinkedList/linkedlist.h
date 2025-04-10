@@ -24,5 +24,7 @@ class Node{
 };
 
 Node<int>* arr2ll(vector<int> &arr);
-
+void printll(Node<int>* head);
+int lengthll(Node<int>* head);
+bool keypresent(Node<int>* head,int key);
 #endif
