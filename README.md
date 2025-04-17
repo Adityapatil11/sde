@@ -82,4 +82,5 @@ The launch Json floder configurations goes as follows
             "cwd": "${workspaceFolder}",
             "environment": [],
             "console": "integratedTerminal"
+            
     },    
