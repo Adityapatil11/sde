@@ -80,3 +80,28 @@ Node<int> *removetail(Node<int> *head)
     temp->next = nullptr;
     return head;
 }
+
+Node<int> *removekthelement(Node<int>*head,int k){
+    if(head == nullptr){
+        return nullptr;
+    }
+    if(k ==1){
+        Node<int>*temp = head;
+        head = head->next;
+        delete temp;
+    }
+    int cnt =0;
+    Node<int>*slider = head;
+    Node<int>*prev = nullptr;
+    while(slider!=nullptr){
+        cnt++;
+        if(cnt == k){
+            prev->next = prev->next->next;
+            delete slider;
+            return head;
+        }
+        prev = slider;
+        slider = slider->next;
+    }
+    return head;
+}

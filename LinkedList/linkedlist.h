@@ -31,4 +31,5 @@ int lengthll(Node<int> *head);
 bool keypresent(Node<int> *head, int key);
 Node<int> *removehead(Node<int> *head);
 Node<int> *removetail(Node<int> *head);
+Node<int> *removekthelement(Node<int> *head, int k);
 #endif
