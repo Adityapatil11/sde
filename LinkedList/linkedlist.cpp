@@ -64,3 +64,19 @@ Node<int> *removehead(Node<int> *head)
     delete head;
     return temp;
 }
+
+Node<int> *removetail(Node<int> *head)
+{
+    if (head == nullptr || head->next == nullptr)
+    {
+        return nullptr;
+    }
+    Node<int> *temp = head;
+    while (temp->next->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    delete temp->next;
+    temp->next = nullptr;
+    return head;
+}
