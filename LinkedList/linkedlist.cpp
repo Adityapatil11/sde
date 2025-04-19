@@ -140,3 +140,24 @@ Node<int> *removeelement(Node<int> *head, int element)
     }
     return head;
 }
+
+Node<int> *inserthead(Node<int> *head, int element)
+{
+    Node<int> *temp = new Node<int>(element, head);
+    return temp;
+}
+
+Node<int> *inserttail(Node<int> *head, int element)
+{
+    if (head == nullptr)
+    {
+        return new Node<int>(element);
+    }
+    Node<int> *temp = head;
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    temp->next = new Node<int>(element);
+    return head;
+}

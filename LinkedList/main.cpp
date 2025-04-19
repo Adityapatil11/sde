@@ -27,5 +27,14 @@ int main()
     Node<int> *new_head4 = removeelement(new_head3, 7);
     printll(new_head4);
     cout << "\nLength of Linked list is : " << lengthll(new_head4) << "\n";
+
+    Node<int> *new_head5 = inserthead(new_head4, 11);
+    printll(new_head5);
+    cout << "\nLength of Linked list is : " << lengthll(new_head5) << "\n";
+
+    Node<int> *new_head6 = inserttail(new_head5, 12);
+    printll(new_head6);
+    cout << "\nLength of Linked list is : " << lengthll(new_head6) << "\n";
+
     return 0;
 }
