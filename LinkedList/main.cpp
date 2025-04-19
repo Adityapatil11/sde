@@ -11,14 +11,21 @@ int main()
     cout << "\nLength of Linked list is : " << lengthll(head) << "\n";
     cout << boolalpha << "Key present in linked list : " << keypresent(head, 5) << "\n";
     cout << boolalpha << "Key present in linked list : " << keypresent(head, 11) << "\n";
+
     Node<int> *new_head = removehead(head);
     printll(new_head);
     cout << "\nLength of Linked list is : " << lengthll(new_head) << "\n";
+
     Node<int> *new_head2 = removetail(new_head);
     printll(new_head2);
     cout << "\nLength of Linked list is : " << lengthll(new_head2) << "\n";
+
     Node<int> *new_head3 = removekthelement(new_head2, 5);
     printll(new_head3);
     cout << "\nLength of Linked list is : " << lengthll(new_head3) << "\n";
+    
+    Node<int> *new_head4 = removeelement(new_head3, 7);
+    printll(new_head4);
+    cout << "\nLength of Linked list is : " << lengthll(new_head4) << "\n";
     return 0;
 }

@@ -81,21 +81,56 @@ Node<int> *removetail(Node<int> *head)
     return head;
 }
 
-Node<int> *removekthelement(Node<int>*head,int k){
-    if(head == nullptr){
+Node<int> *removekthelement(Node<int> *head, int k)
+{
+    if (head == nullptr)
+    {
         return nullptr;
     }
-    if(k ==1){
-        Node<int>*temp = head;
+    if (k == 1)
+    {
+        Node<int> *temp = head;
         head = head->next;
         delete temp;
     }
-    int cnt =0;
-    Node<int>*slider = head;
-    Node<int>*prev = nullptr;
-    while(slider!=nullptr){
+    int cnt = 0;
+    Node<int> *slider = head;
+    Node<int> *prev = nullptr;
+    while (slider != nullptr)
+    {
         cnt++;
-        if(cnt == k){
+        if (cnt == k)
+        {
+            prev->next = prev->next->next;
+            delete slider;
+            return head;
+        }
+        prev = slider;
+        slider = slider->next;
+    }
+    return head;
+}
+
+Node<int> *removeelement(Node<int> *head, int element)
+{
+    if (head == nullptr)
+    {
+        return nullptr;
+    }
+    if (head->data == element)
+    {
+        Node<int> *temp = head;
+        head = head->next;
+        delete temp;
+    }
+    int cnt = 0;
+    Node<int> *slider = head;
+    Node<int> *prev = nullptr;
+    while (slider != nullptr)
+    {
+        cnt++;
+        if (slider->data == element)
+        {
             prev->next = prev->next->next;
             delete slider;
             return head;
