@@ -161,3 +161,34 @@ Node<int> *inserttail(Node<int> *head, int element)
     temp->next = new Node<int>(element);
     return head;
 }
+
+Node<int>* insertkthelement(Node<int> *head,int k,int element)
+{
+    if(head == nullptr)
+    {
+        return nullptr;
+    }
+    if(k == 1)
+    {
+        Node<int> *temp = new Node<int>(element, head);
+        return temp;
+    }
+    int cnt = 0;
+    Node<int> *slider = head;
+    Node<int> *prev = nullptr;
+    while (slider != nullptr)
+    {
+        cnt++;
+        if (cnt == k)
+        {
+            Node<int> *temp = new Node<int>(element, slider);
+            prev->next = temp;
+            return head;
+        }
+        prev = slider;
+        slider = slider->next;
+    }
+    Node<int> *temp = new Node<int>(element);
+    prev->next = temp;
+    return head;
+}

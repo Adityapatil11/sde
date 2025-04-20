@@ -35,4 +35,5 @@ Node<int> *removekthelement(Node<int> *head, int k);
 Node<int> *removeelement(Node<int> *head, int elelment);
 Node<int> *inserthead(Node<int> *head, int element);
 Node<int> *inserttail(Node<int> *head, int element);
+Node<int> *insertkthelement(Node<int> *head, int k, int element);
 #endif

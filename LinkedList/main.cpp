@@ -36,5 +36,8 @@ int main()
     printll(new_head6);
     cout << "\nLength of Linked list is : " << lengthll(new_head6) << "\n";
 
+    Node<int> *new_head7 = insertkthelement(new_head6, 10, 13);
+    printll(new_head7);
+    cout << "\nLength of Linked list is : " << lengthll(new_head7) << "\n";
     return 0;
 }
